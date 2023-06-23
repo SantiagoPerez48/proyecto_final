@@ -1,0 +1,15 @@
+footer{
+    grid-area: footer;
+    height: 100%;
+    padding: 15px;
+    background-color: $colorheaderfoooter;
+    h4{
+        color: whitesmoke;
+        padding: 5px;
+    }
+    section a{
+        text-decoration: none;
+        color: black;
+        margin: 10px;
+    }
+}

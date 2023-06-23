@@ -1,0 +1,15 @@
+@mixin tarjeta($ancho, $alto, $margen,){
+    width: $ancho;
+    height: $alto;
+    margin: $margen;
+}
+
+@mixin tarjetafrente($ancho, $alto){
+    width: $ancho;
+    height: $alto;
+}
+
+@mixin card($padding, $margin){
+    padding: $padding ;
+    margin:$margin;
+}

@@ -1,0 +1,125 @@
+@import "mixins";
+@import "maps";
+main{
+    background: #faf4ff;
+    background: linear-gradient(90deg,#faf4ff 10%, rgba(0,65,246,0.32) 80%);
+    background: -webkit-linear-gradient(90deg,#faf4ff 10%, rgba(0,65,246,0.32) 80%);
+    background: -moz-linear-gradient(90deg,#faf4ff 10%, rgba(0,65,246,0.32) 80%);
+    grid-area: main;
+    background-color: $colormain;
+
+    h2,h3{
+        animation: backInRight; 
+        animation-duration: 1s; 
+    }
+    
+    h3{
+        padding: 10px;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        color: map-get($atras, colordetexto);
+    }
+    
+    .titulo{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        color: map-get($atras, colordetexto);
+        text-shadow: -51px 25px 9px rgba(0,0,0,0.6);
+        
+    }
+    .redondeo{
+        border-radius: 45px 45px 200px 45px;
+        -webkit-border-radius: 45px 45px 200px 45px;
+        -moz-border-radius: 45px 45px 200px 45px;
+        
+        
+    }
+    img{
+        transition: 2s;
+    }
+    img:hover{
+        transform: scale(1.1);
+        transition: 2s;
+
+    }
+    .pdeimg, .tamaño{
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+        margin-left:25px;
+        color: map-get($atras, colordetexto);
+        
+    }
+
+    .pdeimg2, .tamaño2{
+        display: flex;
+        justify-content: left;
+        padding: 50px;
+        margin-left:25px;
+        color: map-get($atras, colordetexto);
+    }
+    
+    .tabla{
+        display: grid;
+        justify-content: center;
+        margin: 10px;
+        padding: 10px;
+        color: map-get($atras, colordetexto);
+    
+    }
+    .card{
+        background-color: map-get($atras, color );
+        @include card (30px, 30px);
+    }
+    
+}
+
+    .tarjeta__father{
+        display: flex;
+        justify-content: center;
+        margin-inline: inherit;
+    }
+
+    .tarjeta__father:hover .tarjeta{
+        transform: rotateY(180deg);
+    }
+
+    .tarjeta{
+        @include tarjeta (400px, 500px, 17px);
+        transform-style: preserve-3d;
+        transition: all 600ms;
+    }
+    .tarjetaredondeo, .tarjeta__back{
+        border-radius: 28px 28px 28px 28px;
+        
+    }
+
+    .tarjeta__front, .tarjeta__back{
+        @include tarjetafrente(100%, 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+    }
+
+
+    .tarjeta__back{
+        transform:rotateY(180deg);
+        background-color: map-get($atras, color );
+        height: 400px;
+        width: 300px;
+        text-align: center;
+    }
+
+    .body__tarjeta__back{
+        padding: 40px;
+        text-align: center;
+        color: map-get($atras, colordeletras);
+    }
+    .body__tarjeta__back p{
+        text-align: center;
+        color: map-get($atras, colordeletras);
+    }

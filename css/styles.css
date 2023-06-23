@@ -1,0 +1,208 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Poppins:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Poppins:ital@0;1&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header header header header" "main main main main" "main main main main" "footer footer footer footer";
+}
+
+header {
+  grid-area: header;
+  background-color: #27374D;
+  padding: 5px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+header nav ul li {
+  padding: 10px;
+  margin-left: 10px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(241, 241, 241);
+}
+
+main {
+  background: #faf4ff;
+  background: linear-gradient(90deg, #faf4ff 10%, rgba(0, 65, 246, 0.32) 80%);
+  background: -webkit-linear-gradient(90deg, #faf4ff 10%, rgba(0, 65, 246, 0.32) 80%);
+  background: -moz-linear-gradient(90deg, #faf4ff 10%, rgba(0, 65, 246, 0.32) 80%);
+  grid-area: main;
+  background-color: whitesmoke;
+}
+main h2, main h3 {
+  animation: backInRight;
+  animation-duration: 1s;
+}
+main h3 {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+}
+main .titulo {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  text-shadow: -51px 25px 9px rgba(0, 0, 0, 0.6);
+}
+main .redondeo {
+  border-radius: 45px 45px 200px 45px;
+  -webkit-border-radius: 45px 45px 200px 45px;
+  -moz-border-radius: 45px 45px 200px 45px;
+}
+main img {
+  transition: 2s;
+}
+main img:hover {
+  transform: scale(1.1);
+  transition: 2s;
+}
+main .pdeimg, main .tamaño {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  margin-left: 25px;
+  color: rgb(0, 0, 0);
+}
+main .pdeimg2, main .tamaño2 {
+  display: flex;
+  justify-content: left;
+  padding: 50px;
+  margin-left: 25px;
+  color: rgb(0, 0, 0);
+}
+main .tabla {
+  display: grid;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+}
+main .card {
+  background-color: silver;
+  padding: 30px;
+  margin: 30px;
+}
+
+.tarjeta__father {
+  display: flex;
+  justify-content: center;
+  margin-inline: inherit;
+}
+
+.tarjeta__father:hover .tarjeta {
+  transform: rotateY(180deg);
+}
+
+.tarjeta {
+  width: 400px;
+  height: 500px;
+  margin: 17px;
+  transform-style: preserve-3d;
+  transition: all 600ms;
+}
+
+.tarjetaredondeo, .tarjeta__back {
+  border-radius: 28px 28px 28px 28px;
+}
+
+.tarjeta__front, .tarjeta__back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.tarjeta__back {
+  transform: rotateY(180deg);
+  background-color: silver;
+  height: 400px;
+  width: 300px;
+  text-align: center;
+}
+
+.body__tarjeta__back {
+  padding: 40px;
+  text-align: center;
+  color: rgb(37, 14, 99);
+}
+
+.body__tarjeta__back p {
+  text-align: center;
+  color: rgb(37, 14, 99);
+}
+
+footer {
+  grid-area: footer;
+  height: 100%;
+  padding: 15px;
+  background-color: #27374D;
+}
+footer h4 {
+  color: whitesmoke;
+  padding: 5px;
+}
+footer section a {
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 599px) {
+  .pdeimg, .pdeimg2 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 320px) and (max-width: 599px) {
+  .tamaño, .tamaño2, .titulo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (min-width: 320px) and (max-width: 599px) {
+  .iframe {
+    width: 300px;
+  }
+}
+@media (min-width: 320px) and (max-width: 599px) {
+  .tarjeta__father {
+    display: grid;
+    align-items: center;
+    margin-inline: inherit;
+  }
+}
+@media (min-width: 320px) and (max-width: 599px) {
+  .tarjeta {
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: all 600ms;
+  }
+}
+header nav li {
+  color: azure;
+}
+
+/*# sourceMappingURL=styles.css.map */
