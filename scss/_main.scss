@@ -74,6 +74,7 @@ main{
         @include card (30px, 30px);
     }
     
+    
 }
 
     .tarjeta__father{
@@ -123,3 +124,5 @@ main{
         text-align: center;
         color: map-get($atras, colordeletras);
     }
+
+    

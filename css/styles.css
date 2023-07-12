@@ -9,13 +9,15 @@
 }
 
 body {
+  overflow-x: hidden;
   display: grid;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas: "header header header header" "main main main main" "main main main main" "footer footer footer footer";
 }
 
 header {
   grid-area: header;
-  background-color: #27374D;
+  background-color: #3f536e;
   padding: 5px;
 }
 header nav {
@@ -37,6 +39,7 @@ header nav ul li a {
 }
 
 main {
+  min-height: 100vh;
   background: #faf4ff;
   background: linear-gradient(90deg, #faf4ff 10%, rgba(0, 65, 246, 0.32) 80%);
   background: -webkit-linear-gradient(90deg, #faf4ff 10%, rgba(0, 65, 246, 0.32) 80%);
@@ -44,6 +47,36 @@ main {
   grid-area: main;
   background-color: whitesmoke;
 }
+
+.formulario {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="datetime-local"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formulario button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 main h2, main h3 {
   animation: backInRight;
   animation-duration: 1s;
@@ -61,11 +94,29 @@ main .titulo {
   padding: 20px;
   color: rgb(0, 0, 0);
   text-shadow: -51px 25px 9px rgba(0, 0, 0, 0.6);
+  animation: backInRight;
+  animation-duration: 1s;
 }
-main .redondeo {
+main .titulo2{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 30px;
+  animation: backInRight;
+  animation-duration: 1s;
+  text-shadow: -51px 25px 9px rgba(0, 0, 0, 0.6);
+}
+main .redondeo1 {
   border-radius: 45px 45px 200px 45px;
   -webkit-border-radius: 45px 45px 200px 45px;
   -moz-border-radius: 45px 45px 200px 45px;
+}
+
+main .redondeo2{
+  border-radius: 39px 39px 39px 39px;
+-webkit-border-radius: 39px 39px 39px 39px;
+-moz-border-radius: 39px 39px 39px 39px;
+
 }
 main img {
   transition: 2s;
@@ -73,6 +124,17 @@ main img {
 main img:hover {
   transform: scale(1.1);
   transition: 2s;
+}
+.nosotros{
+  display: grid;
+  grid-template-rows: 50vh 50vh auto;
+}
+.nosotros .titulo{
+  background-image: url('https://joseppons.com/formacion/wp-content/uploads/2020/11/servicios-salon-barberia.jpeg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 main .pdeimg, main .tamaño {
   display: flex;
@@ -87,6 +149,7 @@ main .pdeimg2, main .tamaño2 {
   padding: 50px;
   margin-left: 25px;
   color: rgb(0, 0, 0);
+  
 }
 main .tabla {
   display: grid;
@@ -156,7 +219,11 @@ footer {
   grid-area: footer;
   height: 100%;
   padding: 15px;
-  background-color: #27374D;
+  background-color: #3f536e;
+  margin-top: auto;
+}
+footer section a i {
+  font-size: 24px; /* Ajusta el tamaño de fuente según tus preferencias */
 }
 footer h4 {
   color: whitesmoke;
@@ -168,11 +235,23 @@ footer section a {
   margin: 10px;
 }
 
-@media (min-width: 320px) and (max-width: 599px) {
-  .pdeimg, .pdeimg2 {
+@media (max-width: 960px) {
+  .pdeimg {
     display: flex;
     flex-direction: column;
   }
+  .pdeimg2 {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 10%;
+  }
+  .nosotros{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    row-gap: 5vh;
+    justify-content: center;
+  }
+  
 }
 @media (min-width: 320px) and (max-width: 599px) {
   .tamaño, .tamaño2, .titulo {

@@ -3,6 +3,9 @@ footer{
     height: 100%;
     padding: 15px;
     background-color: $colorheaderfoooter;
+    footer section a i {
+        font-size: 24px; 
+    }
     h4{
         color: whitesmoke;
         padding: 5px;
